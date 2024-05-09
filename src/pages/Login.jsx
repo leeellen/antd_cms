@@ -1,10 +1,14 @@
 import React from 'react';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input } from 'antd';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
+    const navigate = useNavigate();
+
     const onFinish = (values) => {
         console.log('Received values of form: ', values);
+        navigate('/');
     };
 
     return (
@@ -29,7 +33,7 @@ export default function Login() {
                 </div>
             </section>
             <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <div style={{ maxWidth: 300 }}>
+                <div style={{ width: 300 }}>
                     <h2 style={{ fontSize: 26, fontWeight: 'bold', marginBottom: 3 }}>Hello Again!</h2>
                     <p style={{ fontSize: 18, marginBottom: 40 }}>Welcome Back</p>
                     <Form
@@ -62,7 +66,7 @@ export default function Login() {
                             <Button type="primary" htmlType="submit" className="login-form-button">
                                 Log in
                             </Button>
-                            Or <a href="">register now!</a>
+                            Or <Link to="/signup">register now!</Link>
                         </Form.Item>
                     </Form>
                 </div>

@@ -2,6 +2,7 @@ import PrivateRoute from './route/PrivateRoute';
 import Login from './pages/Login';
 import { Route, Routes } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
+import SignUp from './pages/SignUp';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
         >
             <Routes>
                 <Route path="login" element={<Login />} />
+                <Route path="signup" element={<SignUp />} />
 
                 <Route path="/" element={<PrivateRoute />}>
                     {/* <Route path="/portfolio" element={<Portfolio />} />
