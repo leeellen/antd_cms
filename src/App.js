@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import PrivateRoute from './route/PrivateRoute';
+import Login from './pages/Login';
+import { Route, Routes } from 'react-router-dom';
+import { ConfigProvider } from 'antd';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    return (
+        <ConfigProvider
+            theme={{
+                token: {
+                    colorPrimary: '#0575E6',
+                },
+            }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            <Routes>
+                <Route path="login" element={<Login />} />
+
+                <Route path="/" element={<PrivateRoute />}>
+                    {/* <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/portfolio/:id" element={<PortfolioManage />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/contact/:id" element={<ContactManage />} />
+                <Route path="/news" element={<News />} />
+                <Route path="/news/:id" element={<NewsManage />} /> */}
+                </Route>
+            </Routes>
+        </ConfigProvider>
+    );
 }
 
 export default App;
