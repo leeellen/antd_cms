@@ -1,8 +1,13 @@
 import PrivateRoute from './route/PrivateRoute';
 import Login from './pages/Login';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import SignUp from './pages/SignUp';
+import Dashboard from './pages/Dashboard';
+import Transactions from './pages/Transactions';
+import CreditCards from './pages/CreditCards';
+import MyPrivileges from './pages/accounts/MyPrivileges';
+import Setting from './pages/accounts/Setting';
 
 function App() {
     return (
@@ -18,13 +23,14 @@ function App() {
                 <Route path="signup" element={<SignUp />} />
 
                 <Route path="/" element={<PrivateRoute />}>
-                    {/* <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/portfolio/:id" element={<PortfolioManage />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/contact/:id" element={<ContactManage />} />
-                <Route path="/news" element={<News />} />
-                <Route path="/news/:id" element={<NewsManage />} /> */}
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/transactions" element={<Transactions />} />
+                    <Route path="/creditcards" element={<CreditCards />} />
+                    <Route path="/accounts/myprivileges" element={<MyPrivileges />} />
+                    <Route path="/accounts/setting" element={<Setting />} />
                 </Route>
+
+                <Route path="*" element={<Navigate to="/dashboard" />} />
             </Routes>
         </ConfigProvider>
     );

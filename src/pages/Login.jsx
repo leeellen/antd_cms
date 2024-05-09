@@ -1,6 +1,6 @@
 import React from 'react';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Checkbox, Flex, Form, Input } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
@@ -8,16 +8,15 @@ export default function Login() {
 
     const onFinish = (values) => {
         console.log('Received values of form: ', values);
-        navigate('/');
+        navigate('/dashboard');
     };
 
     return (
         <article style={{ display: 'grid', gridTemplateColumns: '2fr 580px', height: '100%' }}>
-            <section
+            <Flex
+                align="center"
+                justify="center"
                 style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
                     background:
                         'linear-gradient(180deg, rgba(5,117,230,1) 0%, rgba(2,41,138,1) 85%, rgba(2,27,121,1) 100%)',
                 }}
@@ -31,7 +30,7 @@ export default function Login() {
                         <Button type="primary">Read More</Button>
                     </a>
                 </div>
-            </section>
+            </Flex>
             <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <div style={{ width: 300 }}>
                     <h2 style={{ fontSize: 26, fontWeight: 'bold', marginBottom: 3 }}>Hello Again!</h2>
