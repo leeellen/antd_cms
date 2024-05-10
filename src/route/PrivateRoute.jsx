@@ -1,9 +1,30 @@
 import React, { useEffect, useState } from 'react';
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { BookOutlined, CreditCardOutlined, HomeOutlined, TransactionOutlined, UserOutlined } from '@ant-design/icons';
-import { Avatar, ConfigProvider, Layout, Menu, theme } from 'antd';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import {
+    BookOutlined,
+    CreditCardOutlined,
+    HomeOutlined,
+    LogoutOutlined,
+    SettingOutlined,
+    TransactionOutlined,
+    UserOutlined,
+} from '@ant-design/icons';
+import { Avatar, Badge, ConfigProvider, Dropdown, Layout, Menu, theme } from 'antd';
 
 const { Header, Content, Footer, Sider } = Layout;
+
+const dropdownItems = [
+    {
+        key: 'setting',
+        label: <Link>설정</Link>,
+        icon: <SettingOutlined />,
+    },
+    {
+        key: 'logout',
+        label: <Link to="login">로그아웃</Link>,
+        icon: <LogoutOutlined />,
+    },
+];
 
 function getItem(label, key, icon, children) {
     return {
@@ -82,7 +103,12 @@ export default function PrivateRoute() {
                         }}
                     >
                         <h2 style={{ fontSize: 23, fontWeight: 600 }}>{getCurrentTitle()?.label}</h2>
-                        <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
+
+                        <Dropdown menu={{ items: dropdownItems }} placement="bottom">
+                            <Badge count={5}>
+                                <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
+                            </Badge>
+                        </Dropdown>
                     </Header>
                     <Content style={{ padding: '24px 40px' }}>
                         <Outlet />

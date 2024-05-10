@@ -5,9 +5,10 @@ import { ConfigProvider } from 'antd';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
 import Transactions from './pages/Transactions';
-import CreditCards from './pages/CreditCards';
+import CreditCards from './pages/creditCard/CreditCards';
 import MyPrivileges from './pages/accounts/MyPrivileges';
 import Setting from './pages/accounts/Setting';
+import CreditCardsDetail from './pages/creditCard/CreditCardsDetail';
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/transactions" element={<Transactions />} />
                     <Route path="/creditcards" element={<CreditCards />} />
+                    <Route path="/creditcards/:id" element={<CreditCardsDetail />} />
                     <Route path="/accounts/myprivileges" element={<MyPrivileges />} />
                     <Route path="/accounts/setting" element={<Setting />} />
                 </Route>

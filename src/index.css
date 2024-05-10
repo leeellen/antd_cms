@@ -29,6 +29,15 @@ h5,
 h6 {
     margin: 0;
 }
+.content-wrapper {
+    padding: 37px 30px;
+    background-color: #fff;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
 /* login */
 .login-form {
     max-width: 300px;

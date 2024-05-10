@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Table } from 'antd';
-import PageTitle from '../components/PageTitle';
-import useTableSearch from '../hooks/useTableSearch';
+import PageTitle from '../../components/PageTitle';
+import useTableSearch from '../../hooks/useTableSearch';
 
 const tempData = new Array(100).fill(0).map((e, i) => ({
     index: i + 1,
