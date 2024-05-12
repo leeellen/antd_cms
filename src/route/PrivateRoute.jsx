@@ -5,6 +5,9 @@ import {
     CreditCardOutlined,
     HomeOutlined,
     LogoutOutlined,
+    NotificationOutlined,
+    PictureOutlined,
+    ProjectOutlined,
     SettingOutlined,
     TransactionOutlined,
     UserOutlined,
@@ -37,12 +40,10 @@ function getItem(label, key, icon, children) {
 
 const items = [
     getItem('Dashboard', 'dashboard', <HomeOutlined />),
-    getItem('Transactions', 'transactions', <TransactionOutlined />),
-    getItem('Credit Cards', 'creditcards', <CreditCardOutlined />),
-    getItem('Accounts', 'accounts', <UserOutlined />, [
-        getItem('My Privileges', 'myprivileges'),
-        getItem('Setting', 'setting'),
-    ]),
+    getItem('광고 관리', 'ad', <NotificationOutlined />, [getItem('배너', 'banner'), getItem('팝업', 'popup')]),
+    getItem('결제 관리', 'transactions', <TransactionOutlined />),
+    getItem('카드 관리', 'creditcards', <CreditCardOutlined />),
+    getItem('계정 관리', 'accounts', <UserOutlined />, [getItem('권한', 'myprivileges'), getItem('설정', 'setting')]),
 ];
 
 export default function PrivateRoute() {

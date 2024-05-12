@@ -7,3 +7,7 @@ export const getPreview = (file, callback) => {
     reader.addEventListener('load', () => callback(reader.result));
     reader.readAsDataURL(file);
 };
+
+export function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}

@@ -29,6 +29,11 @@ h5,
 h6 {
     margin: 0;
 }
+a,
+a:hover {
+    color: unset;
+}
+
 .content-wrapper {
     padding: 37px 30px;
     background-color: #fff;
@@ -50,4 +55,55 @@ h6 {
 }
 .login-form-button {
     width: 100%;
+}
+/* banner */
+.banner-detail label {
+    display: block;
+    color: #707070;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.upload-interaction img {
+    object-fit: contain;
+    height: inherit;
+}
+
+.banner-detail .pc-banner .ant-upload-wrapper {
+    height: 200px !important;
+}
+.banner-detail .pc-banner .ant-upload {
+    width: 432px !important;
+    height: 200px !important;
+    display: flex;
+    background: transparent !important;
+}
+.banner-detail .mobile-banner .ant-upload-wrapper {
+    height: 450px !important;
+}
+.banner-detail .mobile-banner .ant-upload {
+    width: 375px !important;
+    height: 450px !important;
+    display: flex;
+    background: transparent !important;
+}
+
+/* popup */
+.popup-detail label {
+    display: block;
+    color: #707070;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.popup-detail .popup-img .ant-upload-wrapper {
+    height: 500px !important;
+}
+.popup-detail .popup-img .ant-upload {
+    width: 320px !important;
+    height: 500px !important;
+    display: flex;
+    background: transparent !important;
 }

@@ -62,7 +62,7 @@ export default function CreditCards() {
     return (
         <article>
             <PageTitle
-                title="Credit Cards"
+                title="카드 관리"
                 desc="카드를 관리할 수 있는 페이지입니다."
                 addonBtn={
                     <Link to="create">
