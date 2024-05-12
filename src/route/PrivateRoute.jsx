@@ -9,6 +9,7 @@ import {
     PictureOutlined,
     ProjectOutlined,
     SettingOutlined,
+    SnippetsOutlined,
     TransactionOutlined,
     UserOutlined,
 } from '@ant-design/icons';
@@ -43,6 +44,7 @@ const items = [
     getItem('광고 관리', 'ad', <NotificationOutlined />, [getItem('배너', 'banner'), getItem('팝업', 'popup')]),
     getItem('결제 관리', 'transactions', <TransactionOutlined />),
     getItem('카드 관리', 'creditcards', <CreditCardOutlined />),
+    getItem('공지사항 관리', 'notice', <SnippetsOutlined />),
     getItem('계정 관리', 'accounts', <UserOutlined />, [getItem('권한', 'myprivileges'), getItem('설정', 'setting')]),
 ];
 

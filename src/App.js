@@ -14,6 +14,8 @@ import Banner from './pages/ad/Banner';
 import Popup from './pages/ad/Popup';
 import BannerDetail from './pages/ad/BannerDetail';
 import PopupDetail from './pages/ad/PopupDetail';
+import Notice from './pages/Notice';
+import NoticeDetail from './pages/NoticeDetail';
 
 function App() {
     return (
@@ -39,6 +41,8 @@ function App() {
                     <Route path="/transactions/:id" element={<TransactionsDetail />} />
                     <Route path="/creditcards" element={<CreditCards />} />
                     <Route path="/creditcards/:id" element={<CreditCardsDetail />} />
+                    <Route path="/notice" element={<Notice />} />
+                    <Route path="/notice/:id" element={<NoticeDetail />} />
                     <Route path="/accounts/myprivileges" element={<MyPrivileges />} />
                     <Route path="/accounts/setting" element={<Setting />} />
                 </Route>

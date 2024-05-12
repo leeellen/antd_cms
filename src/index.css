@@ -57,7 +57,7 @@ a:hover {
     width: 100%;
 }
 /* banner */
-.banner-detail label {
+label {
     display: block;
     color: #707070;
     font-size: 16px;
@@ -90,20 +90,23 @@ a:hover {
 }
 
 /* popup */
-.popup-detail label {
-    display: block;
-    color: #707070;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
 .popup-detail .popup-img .ant-upload-wrapper {
     height: 500px !important;
 }
 .popup-detail .popup-img .ant-upload {
     width: 320px !important;
     height: 500px !important;
+    display: flex;
+    background: transparent !important;
+}
+
+/* notice */
+.notice-detail .thumbnail-img .ant-upload-wrapper {
+    height: 180px !important;
+}
+.notice-detail .thumbnail-img .ant-upload {
+    width: 320px !important;
+    height: 180px !important;
     display: flex;
     background: transparent !important;
 }
